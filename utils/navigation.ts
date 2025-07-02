@@ -7,14 +7,33 @@ export interface RouteItem {
   name: string
   icon?: string
   href?: string
+  children?: RouteItem[]
 }
 
 // 主路由配置
 export const mainRoutes: RouteItem[] = [
   { id: "hero", name: "Home", icon: "home" },
-  { id: "how-it-works", name: "How It Works", icon: "steps" },
-  { id: "features-showcase", name: "Features", icon: "star" },
-  { id: "reviews", name: "Reviews", icon: "star" },
+  {
+    name: 'Features',
+    children: [
+      { name: 'Precise Prompting', href: '/features/precise-prompting' },
+      { name: 'In-Image Text', href: '/features/in-image-text' },
+      { name: 'Style Control', href: '/features/style-control' },
+    ],
+  },
+  // {
+  //   name: 'Use Cases',
+  //   children: [
+  //     { name: 'For Designers & Artists', href: '/use-cases/designers-artists' },
+  //     { name: 'For Marketers', href: '/use-cases/marketers' },
+  //     { name: 'For Product Teams', href: '/use-cases/product-teams' },
+  //     { name: 'For Developers', href: '/use-cases/developers' },
+  //     { name: 'For Individuals', href: '/use-cases/individuals' },
+  //   ],
+  // },
+  // { id: "how-it-works", name: "How It Works", icon: "steps" },
+  // { id: "features-showcase", name: "Features", icon: "star" },
+  // { id: "reviews", name: "Reviews", icon: "star" },
   { id: "pricing", name: "Pricing", icon: "tag" },
   { id: "faq", name: "FAQ", icon: "help" },
   // { id: "portfolio", name: "Portfolio", href: "/portfolio", icon: "image" },

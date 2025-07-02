@@ -16,11 +16,20 @@
           <!-- PC端导航 -->
           <div class="hidden lg:flex items-center space-x-8">
             <template v-for="(section, index) in sections" :key="index">
-              <div
-                @click="handleNavClick(section.href || section.id)"
-                class="text-gray-300 hover:text-[#ec2657] transition-colors cursor-pointer"
-              >
-                {{ section.name }}
+              <div class="relative group">
+                <div
+                  @click="handleNavClick(section.href || section.id)"
+                  class="text-gray-300 hover:text-[#ec2657] transition-colors cursor-pointer flex items-center gap-1"
+                >
+                  <span>{{ section.name }}</span>
+                  <svg v-if="section.children" class="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                </div>
+
+                <div v-if="section.children" class="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-48 bg-[rgba(25,23,28,0.9)] backdrop-blur-sm rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-all duration-300 invisible group-hover:visible z-10">
+                  <NuxtLink v-for="child in section.children" :key="child.name" :to="child.href" class="block px-4 py-2 text-sm text-gray-300 hover:bg-[#ec2657]/20 hover:text-[#ec2657] transition-colors rounded-md">
+                    {{ child.name }}
+                  </NuxtLink>
+                </div>
               </div>
             </template>
             <!-- 添加Personal Center和Credits -->
@@ -113,11 +122,30 @@
             <!-- 导航链接 -->
             <div class="space-y-2 mb-6">
               <template v-for="(section, index) in sections" :key="index">
-                <div
-                  @click="() => { handleNavClick(section.href || section.id); isOpen = false; }"
-                  class="block text-gray-300 hover:text-[#ec2657] text-base py-2 transition-colors cursor-pointer"
-                >
-                  {{ section.name }}
+                <div v-if="!section.children">
+                  <div
+                    @click="() => { handleNavClick(section.href || section.id); isOpen = false; }"
+                    class="block text-gray-300 hover:text-[#ec2657] text-base py-2 transition-colors cursor-pointer"
+                  >
+                    {{ section.name }}
+                  </div>
+                </div>
+                <div v-else>
+                  <div class="flex items-center gap-1 text-gray-300 text-base py-2">
+                    <span>{{ section.name }}</span>
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                  </div>
+                  <div class="pl-4 border-l border-gray-700">
+                    <NuxtLink
+                      v-for="child in section.children"
+                      :key="child.href"
+                      :to="child.href"
+                      @click="isOpen = false"
+                      class="block text-gray-400 hover:text-[#ec2657] text-sm py-2 transition-colors"
+                    >
+                      {{ child.name }}
+                    </NuxtLink>
+                  </div>
                 </div>
               </template>
               <NuxtLink
