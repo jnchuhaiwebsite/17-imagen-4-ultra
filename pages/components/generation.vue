@@ -221,8 +221,8 @@ const remainingCredits = computed(() => {
   return userStore.userInfo.free_limit + userStore.userInfo.remaining_limit || 0;
 });
 
-const title = 'Imagen 4 Ultra - Professional AI Art Generation Platform';
-const description = 'Create stunning, high-quality images with Imagen 4 Ultra\'s advanced AI technology. Professional-grade art generation platform that transforms your ideas into beautiful visuals instantly.';
+const title = 'Imagen 4 Ultra | Free Online AI Image Generator';
+const description = 'Create high-quality images with Imagen 4 Ultra’s advanced AI.  Instantly turn your ideas into stunning visuals with clear text—free image generation included.';
 useSeo({
   title,
   description,
