@@ -1,5 +1,8 @@
 <template>
-  <div class="bg-[#101010] text-gray-200">
+  <div
+    class="py-16 bg-blue-pale"
+    aria-labelledby="free-heading"
+  >
     <div class="container mx-auto px-4 py-12 md:py-20">
       <div class="text-center max-w-3xl mx-auto mt-8">
         <h1 class="text-2xl md:text-4xl font-bold  text-center sm:text-5xl bg-gradient-to-r from-[#ec2657] via-[#990066] to-[#333333] bg-clip-text text-transparent mb-4">

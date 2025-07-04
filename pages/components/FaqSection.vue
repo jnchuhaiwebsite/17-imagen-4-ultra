@@ -90,8 +90,8 @@ const faqs = [
     answer: "All your generated images are saved in your <strong>User Center</strong>. You can:<ul class='list-disc pl-5 mt-2 space-y-1'><li>Browse and review all your previous images</li><li>See the exact prompt used for each</li><li>Download any image to your device anytime</li></ul><br>🔒 We don't auto-delete your history, but we recommend downloading your favorites for safekeeping."
   },
   {
-    question: "What happens when I run out of credits?",
-    answer: "Once your credits are used up, you can <strong>purchase a credit pack</strong> to continue generating images. <br>Visit the <strong>Credits</strong> section in your account to view available packages and pricing.<br>"
+    question: "What can I do when I run out of credits?",
+ answer: "Once your credits are used up, you can <strong>purchase a credit pack</strong> to continue generating images. <br>Visit the <strong>pricing</strong> section in 👉 <a href='/pricing' class='text-[#ec2657] hover:underline'>Imagen 4 Ultra Pricing</a> to view available packages and pricing.<br>"
   },
   {
     question: "Can I use the images commercially? What about copyright?",
