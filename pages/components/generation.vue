@@ -115,7 +115,7 @@
               class="h-8 px-3 text-sm border rounded-md transition-colors flex items-center gap-1"
               :class="selectedModel === 'imagen-4-ultra' ? 'border-[#ec2657] bg-[#ec2657]/10 text-[#ec2657]' : 'border-gray-700 text-gray-300 hover:border-gray-600'"
             >
-              Ultra
+            imagen 4 ultra
               <!-- <span v-if="modelScores['imagen-4-ultra']" class="ml-1 text-xs opacity-80">({{ modelScores['imagen-4-ultra'] }} points)</span> -->
             </button>
             <button
@@ -124,7 +124,7 @@
               class="h-8 px-3 text-sm border rounded-md transition-colors flex items-center gap-1"
               :class="selectedModel === 'imagen-4' ? 'border-[#ec2657] bg-[#ec2657]/10 text-[#ec2657]' : 'border-gray-700 text-gray-300 hover:border-gray-600'"
             >
-              Normal
+            imagen 4
               <!-- <span v-if="modelScores['imagen-4']" class="ml-1 text-xs opacity-80">({{ modelScores['imagen-4'] }} points)</span> -->
             </button>
           </div>
