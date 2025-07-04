@@ -1,5 +1,8 @@
 <template>
-  <div class="bg-[#100f13] text-gray-300">
+  <div
+    class="py-16 bg-blue-pale"
+    aria-labelledby="normal-vs-ultra-heading"
+  >
     <div class="container mx-auto px-4 pt-28 pb-16">
       <article class="max-w-3xl mx-auto">
         <header class="text-center mb-12">
