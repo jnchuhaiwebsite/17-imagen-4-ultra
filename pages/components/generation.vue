@@ -1,8 +1,8 @@
 <template>
   <div class="relative w-full flex flex-col items-center justify-start overflow-x-hidden bg-blue-pale ">
     <!-- 标题区 -->
-    <div class="mt-[120px] mb-10 flex flex-col items-center relative z-10">
-      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#ec2657] bg-gradient-to-r from-[#ec2657] via-[#990066] to-[#ec2657] bg-clip-text text-transparent py-4 leading-relaxed">
+    <div class="mt-[40px] mb-10 flex flex-col items-center relative z-10">
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#ec2657] bg-gradient-to-r from-[#ec2657] via-[#990066] to-[#ec2657] bg-clip-text text-transparent py-4 leading-relaxed text-center max-w-[90%] mx-auto">
         Imagen 4 Ultra - Professional AI Art Generation Platform
       </h1>
       <p class="mt-4 text-base text-gray-200 text-center max-w-4xl font-medium">
