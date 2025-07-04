@@ -44,7 +44,7 @@
     <div class="text-center mt-12">
       <button
         @click="scrollToHero"
-        class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-[#ec2657] to-[#333333] hover:opacity-90 text-white rounded-lg font-medium text-base transition-colors duration-200"
+        class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-[#ec2657] to-[#ec2657] hover:opacity-90 text-white rounded-lg font-medium text-base transition-colors duration-200"
         aria-label="Start creating with Imagen 4 Ultra"
       >
         Start Creating Today

@@ -2,7 +2,7 @@
     <div class="relative w-full flex flex-col items-center justify-start overflow-x-hidden">
       <!-- 标题区 -->
       <div class="mt-[64px] mb-10 flex flex-col items-center relative z-10">
-        <h1 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-center bg-gradient-to-r from-[#ec2657] via-[#990066] to-[#333333] bg-clip-text text-transparent drop-shadow-2xl tracking-tight animate-gradient-x">
+        <h1 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-center bg-gradient-to-r from-[#ec2657] via-[#990066] to-[#ec2657] bg-clip-text text-transparent drop-shadow-2xl tracking-tight animate-gradient-x">
           Veo3-AI Video Generation with Realistic Sound
         </h1>
         <p class="mt-4 text-base text-gray-200 text-center max-w-4xl font-medium">
@@ -135,7 +135,7 @@
 
           <!-- 生成按钮 -->
           <button 
-            class="w-full flex items-center justify-center gap-1.5 px-3 mt-3 lg:px-4 py-2 sm:py-2.5 bg-gradient-to-r from-[#ec2657] to-[#333333] hover:from-[#ec2657]/90 hover:to-[#333333]/80 text-white rounded-lg font-extrabold text-base sm:text-lg lg:text-xl shadow-xl transition relative" 
+            class="w-full flex items-center justify-center gap-1.5 px-3 mt-3 lg:px-4 py-2 sm:py-2.5 bg-gradient-to-r from-[#ec2657] to-[#ec2657] hover:from-[#ec2657]/90 hover:to-[#ec2657]/80 text-white rounded-lg font-extrabold text-base sm:text-lg lg:text-xl shadow-xl transition relative" 
             @click="handleAction('generate')"
             :disabled="isGenerating"
           >
@@ -151,7 +151,7 @@
           containerHeight.sm.replace('sm:min-', 'sm:'),
           containerHeight.lg.replace('lg:min-', 'lg:')
         ]">
-          <div class="flex flex-col justify-center items-center w-full h-full bg-gradient-to-br from-[#1a1a1a]/10 via-[#990066]/8 to-[#333333]/10 rounded-[16px]">
+          <div class="flex flex-col justify-center items-center w-full h-full bg-gradient-to-br from-[#1a1a1a]/10 via-[#990066]/8 to-[#ec2657]/10 rounded-[16px]">
             <div class="relative w-full h-[480px] flex items-center justify-center">
               <!-- 进度条 -->
               <div v-if="isGenerating" class="absolute inset-0 flex items-center justify-center">

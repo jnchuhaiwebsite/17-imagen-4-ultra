@@ -2,7 +2,7 @@
   <div class="py-8 sm:py-12 lg:py-16 bg-[#1a1a1a]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center">
-        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#ec2657] bg-gradient-to-r from-[#ec2657] via-[#990066] to-[#333333] bg-clip-text text-transparent">
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#ec2657] bg-gradient-to-r from-[#ec2657] via-[#990066] to-[#ec2657] bg-clip-text text-transparent">
           Case Showcase - Explore Our Creative Works
         </h2>
         <p class="mt-2 sm:mt-4 text-base sm:text-lg lg:text-xl text-gray-300">

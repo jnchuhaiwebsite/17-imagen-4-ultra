@@ -5,7 +5,7 @@
   >
     <div class="container mx-auto px-4 py-12 md:py-20">
       <div class="text-center max-w-3xl mx-auto mt-8">
-        <h1 class="text-2xl md:text-4xl font-bold  text-center sm:text-5xl bg-gradient-to-r from-[#ec2657] via-[#990066] to-[#333333] bg-clip-text text-transparent mb-4">
+        <h1 class="text-2xl md:text-4xl font-bold  text-center sm:text-5xl bg-gradient-to-r from-[#ec2657] via-[#990066] to-[#ec2657] bg-clip-text text-transparent mb-4">
           Imagen 4 Ultra Free | Explore AI Image Generation with 20 Free Credits
         </h1>
         <p class="text-lg md:text-xl text-gray-400 mb-8">

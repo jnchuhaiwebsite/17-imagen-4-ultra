@@ -2,7 +2,7 @@
   <div class="relative w-full flex flex-col items-center justify-start overflow-x-hidden bg-blue-pale ">
     <!-- 标题区 -->
     <div class="mt-[120px] mb-10 flex flex-col items-center relative z-10">
-      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#ec2657] bg-gradient-to-r from-[#ec2657] via-[#990066] to-[#333333] bg-clip-text text-transparent">
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#ec2657] bg-gradient-to-r from-[#ec2657] via-[#990066] to-[#ec2657] bg-clip-text text-transparent py-4 leading-relaxed">
         Imagen 4 Ultra - Professional AI Art Generation Platform
       </h1>
       <p class="mt-4 text-base text-gray-200 text-center max-w-4xl font-medium">
@@ -13,7 +13,9 @@
     <!-- 主体区 -->
     <div class="w-full max-w-[1360px] flex flex-col lg:flex-row gap-3 lg:gap-4 justify-center items-stretch px-2 sm:px-3 lg:px-4 pb-12 lg:pb-20">
       <!-- 左侧表单 -->
-      <div class="w-full mx-auto lg:mx-0 lg:w-[50%] max-w-[576px] lg:max-w-none bg-[#1a1a1a] backdrop-blur-xl rounded-2xl shadow-[0_8px_32px_rgba(0,0,0,0.4)] border border-[#8a8c90]/30 p-6 xl:p-8 flex flex-col gap-2 sm:gap-3 lg:gap-4 relative">
+      <div
+        class="w-full mx-auto lg:mx-0 lg:w-[50%] max-w-[576px] lg:max-w-none bg-[#1a1a1a] backdrop-blur-xl rounded-2xl shadow-[0_8px_32px_rgba(0,0,0,0.4)] border border-[#8a8c90]/30 p-6 xl:p-8 flex flex-col gap-2 sm:gap-3 lg:gap-4 relative"
+      >
         <!-- 提示词输入 -->
         <div>
           <div class="flex items-center justify-between">
@@ -134,7 +136,7 @@
         <SignInButton v-if="!isSignedIn" mode="modal">
           <button
             type="submit"
-            class="w-full flex items-center justify-center gap-1.5 px-3 mt-3 lg:px-4 py-2 sm:py-2.5 bg-gradient-to-r from-[#ec2657] to-[#333333] hover:from-[#ec2657]/90 hover:to-[#333333]/80 text-white rounded-lg font-extrabold text-base sm:text-lg lg:text-xl shadow-xl transition relative"
+            class="w-full flex items-center justify-center gap-1.5 px-3 mt-3 lg:px-4 py-2 sm:py-2.5 bg-gradient-to-r from-[#ec2657] to-[#ec2657] hover:from-[#ec2657]/90 hover:to-[#ec2657]/80 text-white rounded-lg font-extrabold text-base sm:text-lg lg:text-xl shadow-xl transition relative"
           >
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
               <path fill-rule="evenodd" d="M4 5a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V7a2 2 0 00-2-2h-1.586a1 1 0 01-.707-.293l-1.121-1.121A2 2 0 0011.172 3H8.828a2 2 0 00-1.414.586L6.293 4.707A1 1 0 015.586 5H4zm6 9a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd" />
@@ -147,7 +149,7 @@
           v-else
           type="submit"
           @click="generateImage"
-          class="w-full flex items-center justify-center gap-1.5 px-3 mt-3 lg:px-4 py-2 sm:py-2.5 bg-gradient-to-r from-[#ec2657] to-[#333333] hover:from-[#ec2657]/90 hover:to-[#333333]/80 text-white rounded-lg font-extrabold text-base sm:text-lg lg:text-xl shadow-xl transition relative"
+          class="w-full flex items-center justify-center gap-1.5 px-3 mt-3 lg:px-4 py-2 sm:py-2.5 bg-gradient-to-r from-[#ec2657] to-[#ec2657] hover:from-[#ec2657]/90 hover:to-[#ec2657]/80 text-white rounded-lg font-extrabold text-base sm:text-lg lg:text-xl shadow-xl transition relative"
           :disabled="isGenerating"
         >
           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
@@ -160,13 +162,13 @@
 
       <!-- 右侧预览区域 -->
       <div class="w-full mx-auto lg:mx-0 lg:w-[50%] max-w-[576px] lg:max-w-none flex flex-col items-center p-2 sm:p-3 lg:p-4 xl:p-6 bg-[#1a1a1a] backdrop-blur-sm rounded-2xl shadow-2xl border border-[#8a8c90]/30">
-        <div class="flex flex-col justify-center items-center w-full h-full bg-gradient-to-br from-[#1a1a1a]/10 via-[#990066]/8 to-[#333333]/10 rounded-[16px]">
+        <div class="flex flex-col justify-center items-center w-full h-full bg-gradient-to-br from-[#1a1a1a]/10 via-[#990066]/8 to-[#ec2657]/10 rounded-[16px]">
           <div class="relative w-full h-[480px] flex items-center justify-center">
             <div v-if="generatedImage" class="w-full h-full">
               <img :src="generatedImage" alt="Generated Image" class="w-full h-full object-contain rounded-lg" crossorigin="anonymous">
               <button
                 @click="downloadImage"
-                class="absolute top-2 right-2 bg-gradient-to-r from-[#ec2657] to-[#333333] hover:from-[#ec2657]/90 hover:to-[#333333]/80 text-white px-4 py-2 rounded-lg font-semibold text-sm flex items-center gap-2 shadow-xl transition"
+                class="absolute top-2 right-2 bg-gradient-to-r from-[#ec2657] to-[#ec2657] hover:from-[#ec2657]/90 hover:to-[#ec2657]/80 text-white px-4 py-2 rounded-lg font-semibold text-sm flex items-center gap-2 shadow-xl transition"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                   <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd" />
@@ -221,15 +223,15 @@ const remainingCredits = computed(() => {
   return userStore.userInfo.free_limit + userStore.userInfo.remaining_limit || 0;
 });
 
-const title = 'Imagen 4 Ultra | Free Online AI Image Generator';
-const description = 'Create high-quality images with Imagen 4 Ultra’s advanced AI.  Instantly turn your ideas into stunning visuals with clear text—free image generation included.';
+const title = 'Imagen 4 Ultra | Free Online AI Image Generator'
+const description = 'Create high-quality images with Imagen 4 Ultra\'s advanced AI. Instantly turn your ideas into stunning visuals with clear text—free image generation included.'
 useSeo({
   title,
   description,
-  ogTitle: title,
-  ogDescription: description,
-  ogImage: '/img/og-image.jpg', // Make sure to add an appropriate Open Graph image
-  twitterCard: 'summary_large_image',
+  title_template: title,
+  meta_description: description,
+  og_image: '/img/og-image.jpg', // Make sure to add an appropriate Open Graph image
+  twitter_card: 'summary_large_image',
   twitterTitle: title,
   twitterDescription: description,
   twitterImage: '/img/og-image.jpg',
