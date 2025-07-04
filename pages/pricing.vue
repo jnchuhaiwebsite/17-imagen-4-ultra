@@ -116,7 +116,7 @@ const { data, pending, error } = await useAsyncData('pricingPlans', async () => 
     throw err;
   }
 }, {
-  immediate: true
+  // immediate: true
 });
 
 // 监听数据变化
