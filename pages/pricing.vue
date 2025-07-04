@@ -17,7 +17,7 @@
       </p>
 
       <!-- 加载状态 -->
-      <div v-if="pending" class="flex justify-center items-center py-20">
+      <div v-if="pending" class="flex justify-center items-center py-20 w-full">
         <div
           class="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-purple-500"
           aria-label="Loading pricing plans"
@@ -31,7 +31,7 @@
       >
         <!-- 循环渲染套餐卡片 -->
         <article
-          v-for="(plan, index) in data"
+          v-for="(plan, index) in planData"
           :key="index"
           :class="[
             'bg-gray-800 rounded-xl p-8 flex flex-col',
@@ -85,11 +85,11 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref, watch, computed } from "vue";
 import { getSubPlans, payOrder } from "~/api/index";
 import { useClerkAuth } from '~/utils/auth';
 import { useSeo } from '~/composables/useSeo';
-import { useAsyncData } from 'nuxt/app';
+import { useAsyncData } from '#imports';
 
 // 设置SEO
 useSeo({
@@ -107,17 +107,26 @@ const {
 const upgradingPlanId = ref<string | null>(null);
 
 // 使用useAsyncData获取套餐数据
-const { data, pending } = await useAsyncData('pricingPlans'+Math.random(), async () => {
+const { data, pending, error } = await useAsyncData('pricingPlans', async () => {
   try {
-    const res = await getSubPlans() as any;
-    if (res.code === 200 && res.data) {
-      return res.data;
-    }
-    return [];
-  } catch (error) {
-    console.error("Failed to get plan information:", error);
-    return [];
+    const response = await getSubPlans();
+    return response.data;
+  } catch (err) {
+    console.error('Error fetching pricing plans:', err);
+    throw err;
   }
+}, {
+  // immediate: true
+});
+
+// 监听数据变化
+watch(data, (newData) => {
+  console.log('Pricing data updated:', newData);
+});
+
+// 计算属性：确保data有值时才返回
+const planData = computed(() => {
+  return data.value || [];
 });
 
 // 获取套餐特性列表
