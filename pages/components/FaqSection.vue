@@ -26,7 +26,7 @@
             ]"
             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
           >
-            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+            <path fill-rule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clip-rule="evenodd" />
           </svg>
         </button>
           
@@ -48,15 +48,15 @@
         aria-label="Start creating with Imagen 4 Ultra"
       >
         Start Creating Today
-        <svg 
+        <!-- <svg 
           class="ml-2 w-5 h-5" 
           fill="none" 
           stroke="currentColor" 
           viewBox="0 0 24 24"
           aria-hidden="true"
         >
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
-        </svg>
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 13l5-5m0 0l5 5M7 7l5-5m0 0l5 5"></path>
+        </svg> -->
       </button>
     </div>
     </div>

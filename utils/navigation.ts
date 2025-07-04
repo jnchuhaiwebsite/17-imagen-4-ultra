@@ -13,19 +13,30 @@ export interface RouteItem {
 
 // 主路由配置
 export const mainRoutes: RouteItem[] = [
-  { id: "hero", name: "Home", icon: "home" },
+  { id: "hero", name: "Image Generate ", icon: "Image Generate" },
   // { id: "generation", name: "Generation",href: "/", icon: "tag", badge: "imagen 4 ultra", badgePosition: 'right' },
   { id: "how to use", name: "How to Use",href: "/how-to-use", icon: "tag" },
-  { id: "normal vs ultra", name: "Normal vs Ultra", href: "/normal-vs-ultra", icon: "tag" },
+  // { id: "normal vs ultra", name: "Normal vs Ultra", href: "/normal-vs-ultra", icon: "tag" },
   { id: "pricing", name: "Pricing", href: "/pricing", icon: "tag" },
-  { id: "free", name: "Free", href: "/free", icon: "tag", badge: "Hot", badgePosition: 'right' },
+  // { id: "free", name: "Free", href: "/free", icon: "tag", badge: "Hot", badgePosition: 'right' },
   { id: "blog", name: "Blog", href: "/blog", icon: "book" }
 ]
+
+
+export const footerRoutes: RouteItem[] = [
+  { id: "how to use", name: "How to Use",href: "/how-to-use", icon: "tag" },
+  { id: "pricing", name: "Pricing", href: "/pricing", icon: "tag" },
+  { id: "normal vs ultra", name: "Normal vs Ultra", href: "/normal-vs-ultra", icon: "tag" },
+  { id: "free", name: "Free", href: "/free", icon: "tag"},
+  { id: "blog", name: "Blog", href: "/blog", icon: "book" }
+]
+
 
 export const useNavigation = () => {
   const router = useRouter()
   const activeSection = ref('hero')
   const sections = mainRoutes
+  const footerSections = footerRoutes
 
   // 执行滚动到指定section
   const executeScroll = (sectionId: string) => {
@@ -122,6 +133,7 @@ export const useNavigation = () => {
   return {
     activeSection,
     sections,
+    footerSections,
     executeScroll,
     handlePageNavigation,
     handleNavClick,
