@@ -17,7 +17,7 @@
              :class="{ 'md:flex-row-reverse': index % 2 !== 0 }">
           <!-- Text content -->
           <div class="w-full md:w-1/2 space-y-6">
-            <div class="inline-block p-3 bg-gradient-to-r from-[#ec2657] to-[#333333] rounded-lg">
+            <div class="inline-block p-3 bg-gradient-to-r from-[#ec2657] to-[#ec2657] rounded-lg">
               <component :is="feature.icon" class="w-6 h-6 text-white" />
             </div>
             <h3 class="text-2xl font-bold text-[#ec2657]">{{ feature.title }}</h3>
@@ -48,7 +48,7 @@
       <!-- <div class="text-center mt-16">
         <button
           @click="scrollToHero"
-          class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-[#ec2657] to-[#333333] hover:from-[#ec2657]/90 hover:to-[#333333]/80 text-white rounded-lg font-semibold text-lg shadow-lg hover:shadow-xl hover:scale-105 transform transition-all duration-200"
+          class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-[#ec2657] to-[#ec2657] hover:from-[#ec2657]/90 hover:to-[#ec2657]/80 text-white rounded-lg font-semibold text-lg shadow-lg hover:shadow-xl hover:scale-105 transform transition-all duration-200"
         >
           Start Creating Now
           <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

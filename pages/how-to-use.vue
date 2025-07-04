@@ -3,7 +3,8 @@
     class="py-16 bg-blue-pale"
     aria-labelledby="how-to-use-heading"
   >
-    <h1 class="text-3xl md:text-4xl font-bold  text-center sm:text-5xl bg-gradient-to-r from-[#ec2657] via-[#990066] to-[#333333] bg-clip-text text-transparent mb-4">How to Use Imagen 4 Ultra | Step-by-Step Guide</h1>
+  
+    <h1 class="text-3xl md:text-4xl font-bold  text-center sm:text-5xl bg-gradient-to-r from-[#ec2657] via-[#990066] to-[#ec2657] bg-clip-text text-transparent py-4">How to Use Imagen 4 Ultra | Step-by-Step Guide</h1>
     <p class="max-w-3xl mx-auto mt-4 text-lg text-center text-gray-400">
       Unlock the full potential of AI-powered creativity. This guide provides a step-by-step walkthrough on how to use Imagen 4 Ultra, from mastering prompts to advanced style control and text integration.
     </p>

@@ -110,7 +110,7 @@
       <SignInButton mode="modal">
         <button id="bindLogin"
           :disabled="isAuthLoading"
-          class="px-4 py-2 rounded-lg bg-gradient-to-r from-[#ec2657] to-[#333333] text-white hover:opacity-90 transition-all text-sm font-medium disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center shadow-md hover:shadow-lg"
+          class="px-4 py-2 rounded-lg bg-gradient-to-r from-[#ec2657] to-[#ec2657] text-white hover:opacity-90 transition-all text-sm font-medium disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center shadow-md hover:shadow-lg"
         >
           {{ isAuthLoading ? 'Loading...' : 'Log in / Sign up' }}
         </button>

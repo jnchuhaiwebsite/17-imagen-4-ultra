@@ -6,7 +6,7 @@
     <div class="container mx-auto px-4 pt-28 pb-16">
       <article class="max-w-3xl mx-auto">
         <header class="text-center mb-12">
-          <h1 class="text-3xl md:text-4xl font-bold  text-center sm:text-5xl bg-gradient-to-r from-[#ec2657] via-[#990066] to-[#333333] bg-clip-text text-transparent mb-4">Imagen 4.0 vs Ultra | Choosing the Right Image Generation Model</h1>
+          <h1 class="text-3xl md:text-4xl font-bold  text-center sm:text-5xl bg-gradient-to-r from-[#ec2657] via-[#990066] to-[#ec2657] bg-clip-text text-transparent py-4">Imagen 4.0 vs Ultra | Choosing the Right Image Generation Model</h1>
           <p class="text-lg text-gray-400">A comprehensive guide to Google's latest image generation models, helping you make an informed decision.</p>
         </header>
 
