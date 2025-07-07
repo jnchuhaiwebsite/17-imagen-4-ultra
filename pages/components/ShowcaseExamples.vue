@@ -27,9 +27,9 @@
               >
               <button 
                 @click="copyPrompt(slides[slides.length - 1].prompt)"
-                class="absolute top-2 sm:top-4 right-2 sm:right-4 bg-[#ec2657] hover:bg-[#990066] px-3 sm:px-4 py-1.5 sm:py-2 rounded-full shadow-lg flex items-center space-x-2 transition-colors duration-200"
+                class="absolute top-2 sm:top-4 right-2 sm:right-4 hover:opacity-80 p-2 rounded-full shadow-lg flex items-center space-x-2 transition-opacity duration-200 bg-black/30 backdrop-blur-sm"
               >
-                <span class="text-xs sm:text-sm font-medium text-white">Copy Prompt</span>
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="m4 16c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2h8c1.1 0 2 .9 2 2"></path></svg>
               </button>
             </div>
 
@@ -42,9 +42,9 @@
               >
               <button 
                 @click="copyPrompt(slide.prompt)"
-                class="absolute top-2 sm:top-4 right-2 sm:right-4 bg-[#ec2657] hover:bg-[#990066] px-3 sm:px-4 py-1.5 sm:py-2 rounded-full shadow-lg flex items-center space-x-2 transition-colors duration-200"
+                class="absolute top-2 sm:top-4 right-2 sm:right-4 hover:opacity-80 p-2 rounded-full shadow-lg flex items-center space-x-2 transition-opacity duration-200 bg-black/30 backdrop-blur-sm"
               >
-                <span class="text-xs sm:text-sm font-medium text-white">Copy Prompt</span>
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="m4 16c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2h8c1.1 0 2 .9 2 2"></path></svg>
               </button>
             </div>
 
@@ -57,9 +57,9 @@
               >
               <button 
                 @click="copyPrompt(slides[0].prompt)"
-                class="absolute top-2 sm:top-4 right-2 sm:right-4 bg-[#ec2657] hover:bg-[#990066] px-3 sm:px-4 py-1.5 sm:py-2 rounded-full shadow-lg flex items-center space-x-2 transition-colors duration-200"
+                class="absolute top-2 sm:top-4 right-2 sm:right-4 hover:opacity-80 p-2 rounded-full shadow-lg flex items-center space-x-2 transition-opacity duration-200 bg-black/30 backdrop-blur-sm"
               >
-                <span class="text-xs sm:text-sm font-medium text-white">Copy Prompt</span>
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="m4 16c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2h8c1.1 0 2 .9 2 2"></path></svg>
               </button>
             </div>
           </div>
