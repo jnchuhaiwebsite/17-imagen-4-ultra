@@ -11,7 +11,7 @@
       </div>
 
       <h1 class="text-3xl font-bold mb-8 text-white">Terms of Service</h1>
-      <p class="text-gray-300 mb-8">Effective Date: {{ new Date().toLocaleDateString() }}</p>
+      <p class="text-gray-300 mb-8">Effective Date: July 4, 2025</p>
       
       <div class="space-y-6 text-white">
         <section>
@@ -78,7 +78,7 @@
         </section>
 
         <section class="mt-8">
-          <p class="text-sm">Last updated: {{ new Date().toLocaleDateString() }}</p>
+          <p class="text-sm">Last updated: July 4, 2025</p>
         </section>
       </div>
     </div>
