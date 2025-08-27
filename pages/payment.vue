@@ -95,14 +95,14 @@
 
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
-import { getSubPlans,getSubplansTest } from '~/api/index'
+import { getSubPlans,getSubplansTest,getCurrentUser } from '~/api/index'
 
 
 // Plan information
 const planInfo = ref<any>(null)
 const paymentStatus = ref<'success' | 'failed' | null>(null)
 const isLoading = ref(true)
-
+const email = ref<string>('')
 // Get plan features list
 const getPlanFeatures = (plan: any): string[] => {
   if (!plan.features) return [];
@@ -118,10 +118,32 @@ onMounted(async () => {
     const level = urlParams.get('level');
     const paySuccess = urlParams.get('paysuccess');
     const payFail = urlParams.get('payfail');
-    
+
+    // alert(email.value)
     // Set payment status
     if (paySuccess == '1') {
       paymentStatus.value = 'success';
+      const response = await getCurrentUser() as any;
+      if (response.data && response.data.email) {
+        email.value = response.data.email;
+      }
+      function gtag(...args: any[]) {
+          window.dataLayer.push(arguments)
+        }
+      // console.log(email.value);
+ 
+        // window.gtag('event', 'conversion', {
+        //   'send_to': 'AW-17364631960/T0wYCNqM__IaEJiDjdhA',
+        //   'transaction_id': ''
+        // });
+
+        gtag('set', 'user_data', { 'email': email.value});
+        gtag('event', 'conversion', {
+          'send_to': 'AW-16699731013/MGGiCN6EsI4bEMXYhps-',
+          'value': 1.0,
+          'currency': 'USD',
+          'transaction_id': ''
+        });
     } else if (payFail == '1') {
       paymentStatus.value = 'failed';
       isLoading.value = false;

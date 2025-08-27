@@ -4,6 +4,7 @@
     <slot />
     <Footer />
     <BackToTop />
+    <DelayedAnalytics />
   </div>
 </template>
 
@@ -14,5 +15,6 @@ import Navbar from '~/components/Navbar.vue'
 const Footer = defineAsyncComponent(() => import('~/components/Footer.vue'))
 // 异步组件
 const BackToTop = defineAsyncComponent(() => import('~/components/BackToTop.vue'))
+const DelayedAnalytics = defineAsyncComponent(() => import('~/components/DelayedAnalytics.vue'))
 
 </script>
