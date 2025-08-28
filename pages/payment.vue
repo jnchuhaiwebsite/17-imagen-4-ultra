@@ -97,6 +97,13 @@
 import { ref, onMounted } from 'vue'
 import { getSubPlans,getSubplansTest,getCurrentUser } from '~/api/index'
 
+// 扩展 Window 接口，添加 gtag 函数和 dataLayer 类型
+declare global {
+  interface Window {
+    gtag: (...args: any[]) => void
+    dataLayer: any[]
+  }
+}
 
 // Plan information
 const planInfo = ref<any>(null)
@@ -127,23 +134,20 @@ onMounted(async () => {
       if (response.data && response.data.email) {
         email.value = response.data.email;
       }
-      function gtag(...args: any[]) {
-          window.dataLayer.push(arguments)
-        }
-      // console.log(email.value);
- 
-        // window.gtag('event', 'conversion', {
-        //   'send_to': 'AW-17364631960/T0wYCNqM__IaEJiDjdhA',
-        //   'transaction_id': ''
-        // });
-
-        gtag('set', 'user_data', { 'email': email.value});
-        gtag('event', 'conversion', {
+      
+      // Google Ads 转化跟踪 - 使用全局 gtag 函数
+      if (typeof window !== 'undefined' && window.gtag) {
+        // 设置用户数据
+        window.gtag('set', 'user_data', { 'email': email.value });
+        
+        // 跟踪转化事件
+        window.gtag('event', 'conversion', {
           'send_to': 'AW-16699731013/MGGiCN6EsI4bEMXYhps-',
           'value': 1.0,
           'currency': 'USD',
           'transaction_id': ''
         });
+      }
     } else if (payFail == '1') {
       paymentStatus.value = 'failed';
       isLoading.value = false;
