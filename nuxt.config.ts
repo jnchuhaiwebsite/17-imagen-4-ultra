@@ -123,7 +123,20 @@ export default defineNuxtConfig({
         { name: 'application-name', content: 'Imagen 4 Ultra' },
       ],
       script: [
-        { src: '/js/c6h.js', async: true } 
+        { src: '/js/c6h.js', async: true },
+        // Google Ads 转化跟踪代码
+        { 
+          src: 'https://www.googletagmanager.com/gtag/js?id=AW-16699731013', 
+          async: true 
+        },
+        {
+          innerHTML: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-16699731013');
+          `
+        }
       ], // 外部脚本
     }
   },

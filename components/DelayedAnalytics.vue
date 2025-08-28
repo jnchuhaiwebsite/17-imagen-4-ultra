@@ -38,23 +38,6 @@ onMounted(() => {
     }
   }
 
-  // 延迟加载 Google Ads
-  const loadGoogleAds = () => {
-    const script = document.createElement('script')
-    script.src = 'https://www.googletagmanager.com/gtag/js?id=AW-16699731013'
-    script.async = true
-    document.head.appendChild(script)
-    
-    script.onload = () => {
-      window.dataLayer = window.dataLayer || []
-      function gtag(...args: any[]) {
-        window.dataLayer.push(arguments)
-      }
-      gtag('js', new Date())
-      gtag('config', 'AW-16699731013')
-    }
-  }
-
   // 使用 Intersection Observer 延迟加载
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -62,7 +45,6 @@ onMounted(() => {
         // 当页面可见时加载分析脚本
         // loadCNZZ()
         loadGoogleAnalytics()
-        loadGoogleAds()
         observer.disconnect()
       }
     })
