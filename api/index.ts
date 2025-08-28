@@ -29,7 +29,7 @@ export const urlList = {
   upload: baseUrl + '/api/common/upload', // 上传图片获取url
   getTimesLog: baseUrl + '/api/user/times_log', // 获取使用次数日志、消费记录
 
-  loginAuth: baseUrl + '/api/user/auth', // 登录认证
+  loginAuth: baseUrl + '/api/user/login_auth', // 登录认证
   blogCategoryList: baseUrl + '/api/cms/blogCategoryList', // 获取博客分类列表
   blogList: baseUrl + '/api/cms/blogList', // 获取博客列表
   createTasksText: baseUrl + '/api/task/imagen4/create',  // 创建任务-文生图
