@@ -29,6 +29,77 @@ export default defineNuxtConfig({
       htmlAttrs: {
         lang: 'en' // 设置 HTML 语言
       },
+      link: [
+        // 预连接到重要域名
+        {
+          rel: 'preconnect',
+          href: 'https://c.cnzz.com',
+          crossorigin: 'anonymous'
+        },
+        {
+          rel: 'preconnect',
+          href: 'https://v1.cnzz.com',
+          crossorigin: 'anonymous'
+        },
+        {
+          rel: 'preconnect',
+          href: 'https://www.googletagmanager.com',
+          crossorigin: 'anonymous'
+        },
+        {
+          rel: 'preconnect',
+          href: 'https://www.google-analytics.com',
+          crossorigin: 'anonymous'
+        },
+        // DNS 预取
+        {
+          rel: 'dns-prefetch',
+          href: 'https://c.cnzz.com'
+        },
+        {
+          rel: 'dns-prefetch',
+          href: 'https://v1.cnzz.com'
+        },
+        {
+          rel: 'dns-prefetch',
+          href: 'https://www.googletagmanager.com'
+        },
+        {
+          rel: 'dns-prefetch',
+          href: 'https://www.google-analytics.com'
+        },
+        // 预加载关键字体 - 优化加载顺序
+        {
+          rel: 'preload',
+          href: '/fonts/265822651.woff2',
+          as: 'font',
+          type: 'font/woff2',
+          crossorigin: 'anonymous',
+          fetchpriority: 'high'
+        },
+         {
+          rel: 'preload',
+          href: '/fonts/265822652.woff2',
+          as: 'font',
+          type: 'font/woff2',
+          crossorigin: 'anonymous',
+          fetchpriority: 'high'
+        },
+        {
+          rel: 'preload',
+          href: '/assets/css/main.css',
+          as: 'style',
+          fetchpriority: 'high'
+        },
+        {
+          rel: 'preload',
+          href: '/assets/css/tailwind.css',
+          as: 'style',
+          fetchpriority: 'high'
+        },
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+        { rel: 'canonical', href: 'https://www.aimagen4.com' }
+      ],
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -54,10 +125,6 @@ export default defineNuxtConfig({
       script: [
         { src: '/js/c6h.js', async: true } 
       ], // 外部脚本
-      link: [
-        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-        { rel: 'canonical', href: 'https://www.aimagen4.com' }
-      ]
     }
   },
   routeRules: {

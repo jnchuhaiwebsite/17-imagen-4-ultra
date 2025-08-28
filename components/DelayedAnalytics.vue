@@ -22,21 +22,21 @@ onMounted(() => {
   // }
 
   // 延迟加载 Google Analytics
-  // const loadGoogleAnalytics = () => {
-  //   const script = document.createElement('script')
-  //   script.src = 'https://www.googletagmanager.com/gtag/js?id=G-TE7JHEHZ6J'
-  //   script.async = true
-  //   document.head.appendChild(script)
+  const loadGoogleAnalytics = () => {
+    const script = document.createElement('script')
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-3577FPCTP9'
+    script.async = true
+    document.head.appendChild(script)
     
-  //   script.onload = () => {
-  //     window.dataLayer = window.dataLayer || []
-  //     function gtag(...args: any[]) {
-  //       window.dataLayer.push(arguments)
-  //     }
-  //     gtag('js', new Date())
-  //     gtag('config', 'G-TE7JHEHZ6J')
-  //   }
-  // }
+    script.onload = () => {
+      window.dataLayer = window.dataLayer || []
+      function gtag(...args: any[]) {
+        window.dataLayer.push(arguments)
+      }
+      gtag('js', new Date())
+      gtag('config', 'G-3577FPCTP9')
+    }
+  }
 
   // 延迟加载 Google Ads
   const loadGoogleAds = () => {
@@ -61,7 +61,7 @@ onMounted(() => {
       if (entry.isIntersecting) {
         // 当页面可见时加载分析脚本
         // loadCNZZ()
-        // loadGoogleAnalytics()
+        loadGoogleAnalytics()
         loadGoogleAds()
         observer.disconnect()
       }
